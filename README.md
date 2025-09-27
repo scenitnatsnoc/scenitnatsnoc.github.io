@@ -14,6 +14,7 @@ Above is the code review for each of the following categories:
 +	Software design and engineering 
 +	Algorithms and data structure 
 +	Databases
+
 ## Software design and engineering
 For my Artifact in the Software Engineering and Design category, I chose to enhance one of the applications I developed in Java during my previous course, IT-145: Java Programming. I was tasked with developing a software application in Java for the fictitious company Grazioso Salvare, which helps track search and rescue animals. These search and rescue animals are obtained and trained by the company for the purpose of rescuing humans from life-threatening situations. The required functionality of the application was to intake animals, reserve animals, and print available animals to the user's console. My enhancements for this artifact include porting it to the Python language, adding a SQLite database for persistent storage, and implementing login functionality with secure storage of hashed credentials.
 
