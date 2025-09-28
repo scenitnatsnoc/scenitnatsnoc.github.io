@@ -10,9 +10,6 @@ Being proficient in multiple programming languages and design patterns, and know
 
 # Code Review
 
-{% raw %} {% include my_youtube_video.html id="dzf8YLo4710" %}
-{% endraw %}
-
 {% include my_youtube_video.html id="dzf8YLo4710" %}
 
 Above is the code review for each of the following categories:
