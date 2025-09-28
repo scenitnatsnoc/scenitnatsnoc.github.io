@@ -9,7 +9,12 @@ With my ePortfolio, I aim to demonstrate my proficiency in multiple programming 
 Being proficient in multiple programming languages and design patterns, and knowing when to utilize them based on various use cases, makes me a stronger candidate for software engineering positions, which is a specialization I am targeting.
 
 # Code Review
-[![Code Review for all Artifacts for CS499](https://img.youtube.com/vi/dzf8YLo4710/maxresdefault.jpg)](https://www.youtube.com/watch?v=dzf8YLo4710)
+
+{% raw %} {% include my_youtube_video.html id="dzf8YLo4710" %}
+{% endraw %}
+
+{% include my_youtube_video.html id="dzf8YLo4710" %}
+
 Above is the code review for each of the following categories:
 +	Software design and engineering 
 +	Algorithms and data structure 
