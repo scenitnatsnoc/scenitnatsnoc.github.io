@@ -10,12 +10,16 @@ Being proficient in multiple programming languages and design patterns, and know
 
 # Code Review
 
-{% include my_youtube_video.html id="dzf8YLo4710" %}
+It is a collaborative process in which other members of a development team review each other’s code, offering critiques, suggesting potential improvements, and asking questions about its functionality, design, and other aspects.
 
-Above is the code review for each of the following categories:
+Reviewing code helps maintain the best coding standards across the codebase, in accordance with the company’s policy, which encompasses code elements such as styling, formatting, design patterns, and naming conventions. It is also used to introduce new features or methods to the team that will be included in the codebase, ensuring everyone is on the same page. Last but not least, it's a great way to facilitate team discussions and plan ahead, learn from one another, and become a stronger team. 
+
+Below is the code review for each of my artifacts in the following categories:
 +	Software design and engineering 
 +	Algorithms and data structures 
 +	Databases
+
+{% include my_youtube_video.html id="dzf8YLo4710" %}
 
 ## Software design and engineering
 For my Artifact in the Software Engineering and Design category, I chose to enhance one of the applications I developed in Java during my previous course, IT-145: Java Programming. We were tasked with developing a Java software application for the fictitious company Grazioso Salvare to help track search-and-rescue animals. These search-and-rescue animals are obtained and trained by the company to rescue humans from life-threatening situations. The required functionality of the application was to intake animals, reserve animals, and print available animals to the user's console. My enhancements for this artifact include porting it to Python, adding a SQLite database for persistent storage, and implementing login functionality with secure credential storage.
