@@ -3,7 +3,7 @@
 In one of the previous assignments at Study.com during the Computer Science 201 - Data Structures & Algorithms course, we were tasked with developing a Java application that sorts an unsorted list of States and Capitals in natural order (alphabetical), either by State or by Capital. Additionally, we needed to create a HashMap (to demonstrate that it does not guarantee the order) and a TreeMap (to show that it sorts in natural order by default) of States and capitals. Finally, a Trivia Game to test knowledge of states and their capitals needed to be implemented, along with a single question/answer module to determine the capital of a particular state.
 
 I selected this artifact to demonstrate my knowledge and understanding of data structures and algorithms, as well as my ability to develop creative solutions for various problems in the computer science field. From arrays, hash maps, and treemaps to the bubble sort algorithm and its optimizations, my artifact encompasses a wide range of topics in algorithms and data structures, utilizing Java as the primary programming language. The enhancements I implemented include optimizing the bubble sort functions bubbleSortCapsFunc(myArray) and bubbleSortStatesFunc(myArray) to sort a 2D array of capitals and their corresponding states, either by state or by capital, preventing the code from continuing to iterate through the array even after it was already sorted with the help of a boolean isSorted variable:
-```Java
+```java
 ...
 // function to bubble sort by the states
     // returns the amount of iterations through all
@@ -67,7 +67,7 @@ I selected this artifact to demonstrate my knowledge and understanding of data s
 ...
 ```
 The optimized versions are, on average, 20% more efficient because they require around 20% fewer iterations. This was demonstrated with the newly developed method getAverageOptimization(iterations), which creates two identical arrays, sorts both the optimized and non-optimized versions using a bubble sort, given the number of iterations, and calculates the average improvement as a percentage:
-```Java
+```java
 ...
 // get average optimization in percentage
     public static double getAverageOptimization(int iterations) {
@@ -95,7 +95,7 @@ The optimized versions are, on average, 20% more efficient because they require 
 ...
 ```
 Another improvement was to add save-score functionality for the Trivia Game of States and Capitals, where I created an algorithm to save the user’s name and scores to a file and display the scoreboard, sorted from highest to lowest, using the bubble sort algorithm:
-```Java
+```java
 ...
 // method to add scores to the score board
     public static void addScore(double myScore, String myUsername) {
@@ -209,7 +209,7 @@ Another improvement was to add save-score functionality for the Trivia Game of S
 ...
 ```
 Finally, a main menu was added for users to pick one of the following options: print unsorted array of states and capitals, sort by capitals by using the optimized bubble sort method, sort by states by using the optimized bubble sort method, play Trivia Game,  a single Q/A Game to practice knowledge of states and their capitals, print optimization in percentage based on interations, print our Score Board for Trivia Game, and quit application:
-```Java
+```java
 ...
 // This method prints the menu options
     public static void displayMenu() {
