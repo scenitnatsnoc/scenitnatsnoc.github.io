@@ -20,10 +20,15 @@ Above is the code review for each of the following categories:
 ## Software design and engineering
 For my Artifact in the Software Engineering and Design category, I chose to enhance one of the applications I developed in Java during my previous course, IT-145: Java Programming. We were tasked with developing a Java software application for the fictitious company Grazioso Salvare to help track search-and-rescue animals. These search-and-rescue animals are obtained and trained by the company to rescue humans from life-threatening situations. The required functionality of the application was to intake animals, reserve animals, and print available animals to the user's console. My enhancements for this artifact include porting it to Python, adding a SQLite database for persistent storage, and implementing login functionality with secure credential storage.
 
+[Artifact One Page](https://scenitnatsnoc.github.io/artifact_one/)
+
 ## Algorithms and data structure
 For my Artifact in the Algorithms and data structure category, I chose to enhance one of the applications in one of the previous assignments at Study.com during the Computer Science 201 - Data Structures & Algorithms course, we were tasked with developing a Java application that sorts an unsorted list of States and Capitals in natural order (alphabetical), either by State or by Capital. Additionally, we needed to create a HashMap (to demonstrate that it does not guarantee the order) and a TreeMap (to show that it sorts in natural order by default) of States and capitals. Finally, a Trivia Game to test knowledge of states and their capitals needed to be implemented, along with a single question/answer module to determine the capital of a particular state.
+
+[Artifact Two Page](https://scenitnatsnoc.github.io/artifact_one/)
 
 ## Databases
 For my Artifact in the Algorithms and data structure category, I chose to visualize data from the DAD-220 course by creating a database, importing the data, migrating it to MongoDB, and using Python DASH dashboards and graphs to analyze the company’s performance.
 
+[Artifact Three Page](https://scenitnatsnoc.github.io/artifact_one/)
 
