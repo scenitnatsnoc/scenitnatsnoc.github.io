@@ -25,10 +25,10 @@ For my Artifact in the Software Engineering and Design category, I chose to enha
 ## Algorithms and data structure
 For my Artifact in the Algorithms and data structure category, I chose to enhance one of the applications in one of the previous assignments at Study.com during the Computer Science 201 - Data Structures & Algorithms course, we were tasked with developing a Java application that sorts an unsorted list of States and Capitals in natural order (alphabetical), either by State or by Capital. Additionally, we needed to create a HashMap (to demonstrate that it does not guarantee the order) and a TreeMap (to show that it sorts in natural order by default) of States and capitals. Finally, a Trivia Game to test knowledge of states and their capitals needed to be implemented, along with a single question/answer module to determine the capital of a particular state.
 
-[Artifact Two Page](https://scenitnatsnoc.github.io/artifact_one/)
+[Artifact Two Page](https://scenitnatsnoc.github.io/artifact_two/)
 
 ## Databases
 For my Artifact in the Algorithms and data structure category, I chose to visualize data from the DAD-220 course by creating a database, importing the data, migrating it to MongoDB, and using Python DASH dashboards and graphs to analyze the company’s performance.
 
-[Artifact Three Page](https://scenitnatsnoc.github.io/artifact_one/)
+[Artifact Three Page](https://scenitnatsnoc.github.io/artifact_three/)
 
