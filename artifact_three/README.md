@@ -76,5 +76,5 @@ Below the logo, I placed the Choropleth Map to show which state has the most RMA
 ...
 ```
 
-By implementing my enhancements, I achieved both of my planned course outcomes, demonstrating my ability to employ strategies for building collaborative environments that support diverse audiences in organizational decision-making within the field of computer science. Additionally, I can design, develop, and deliver professional-quality oral, written, and visual communications that are clear, technically accurate, and appropriately tailored to specific audiences and contexts.    
+By implementing my enhancements, I achieved both of my planned outcomes, demonstrating my ability to employ strategies for building collaborative environments that support diverse audiences in organizational decision-making within the field of computer science. Additionally, I can design, develop, and deliver professional-quality oral, written, and visual communications that are clear, technically accurate, and appropriately tailored to specific audiences and contexts.    
 
