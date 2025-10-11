@@ -46,4 +46,4 @@ For my Artifact in the Algorithms and data structure category, I chose to visual
 
 # Certifications
 <p><img src="https://images.credly.com/size/680x680/images/b1da1cd4-98da-48de-b604-b5d2b72ac696/image.png" alt="Offensive Security Certified Expert (OSCE) badge image. Certification. Advanced level. Issued by Offensive Security" width="140" height="140">
-<img src="https://images.credly.com/size/680x680/images/ec81134d-e80b-4eb5-ae07-0eb8e1a60fcd/image.png" alt="Offensive Security Certified Professional (OSCP) badge image. Certification. Foundational level. Issued by Offensive Security" width="140" height="140"></p>p
+<img src="https://images.credly.com/size/680x680/images/ec81134d-e80b-4eb5-ae07-0eb8e1a60fcd/image.png" alt="Offensive Security Certified Professional (OSCP) badge image. Certification. Foundational level. Issued by Offensive Security" width="140" height="140"></p>
