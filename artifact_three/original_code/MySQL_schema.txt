@@ -1,0 +1,30 @@
+CREATE TABLE `Customers` (
+  `CustomerID` INT,
+  `FirstName` VARCHAR(25),
+  `LastName` VARCHAR(25),
+  `Street` VARCHAR(50),
+  `City` VARCHAR(50),
+  `State` VARCHAR(25),
+  `ZipCode` VARCHAR(10),
+  `Telephone` VARCHAR(15),
+  PRIMARY KEY (`CustomerID`)
+);
+
+CREATE TABLE Orders (
+  OrderID INT,
+  CustomerID INT,
+  SKU VARCHAR(20),
+  Description VARCHAR(50),
+  PRIMARY KEY (OrderID),
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE RMA (
+  RMAID INT,
+  OrderID INT,
+  Step VARCHAR(50),
+  Status VARCHAR(15),
+  Reason VARCHAR(15),
+  PRIMARY KEY (RMAID),
+  FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
