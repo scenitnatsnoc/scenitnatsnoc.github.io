@@ -14,11 +14,11 @@ import base64
 import dash_leaflet.express as dlx
 from dash_extensions.javascript import arrow_function, assign
 
-# Configure OS routines and dotenv to access our secrets from .env file
+# Configure OS routines and dotenv to access our secrets from the .env file
 import os
 from dotenv import load_dotenv
 
-# importing googlemaps libs
+# importing Google Maps libs
 import googlemaps
 
 # Configure the plotting routines
@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 import json
 from json import loads, dumps
 
-# Incorporate css
+# Incorporate CSS
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # importing custom Python CRUD module
@@ -67,7 +67,7 @@ with open(us_states_file, 'r') as file:
     print("Opening out file for our heat map")
     states_data = json.load(file)
 
-# function to retrieve coordinates for state with google maps api
+# function to retrieve coordinates for state with Google Maps api
 def getCoordinatesGmaps(myState):
     gmaps = googlemaps.Client(key=g_api_key)
     myList = []
@@ -75,21 +75,21 @@ def getCoordinatesGmaps(myState):
     myList.append(gmaps.geocode(myState)[0]['geometry']['location']['lat'])
     return myList
 
-# class read method must support return of list object and accept projection json input
-# sending the read method an empty document requests all documents be returned
+# class read method must support return of a list object and accept a projection JSON input
+# sending the read method an empty document requests that all documents be returned
 df = pd.DataFrame.from_records(db.read({}))
 
-# MongoDB v5+ is going to return the '_id' column and that is going to have an 
-# invlaid object type of 'ObjectID' - which will cause the data_table to crash - so we remove
+# MongoDB v5+ is going to return the '_id' column, and that is going to have an 
+# invalid object type of 'ObjectID' - which will cause the data_table to crash - so we remove
 # it in the dataframe here. The df.drop command allows us to drop the column. If we do not set
-# inplace=True - it will reeturn a new dataframe that does not contain the dropped column(s)
+# inplace=True - it will return a new dataframe that does not contain the dropped column(s)
 df.drop(columns=['_id'],inplace=True)
 
 
 ## Debug
 # print(len(df.to_dict(orient='records')))
 # print(df.columns)
-
+# taken and modified from https://www.dash-leaflet.com/docs/geojson_tutorial
 def get_info(feature=None):
     header = [html.H4("RMAs Choropleth Map")]
     if not feature:
@@ -100,12 +100,14 @@ def get_info(feature=None):
         "{} RMAs per state".format(feature["properties"]["count"]),
     ]
 
+# taken and modified from https://www.dash-leaflet.com/docs/geojson_tutorial
 classes = [650, 700, 750, 800, 850, 900, 950, 1000]
 colorscale = ["#FFEDA0", "#FED976", "#FEB24C", "#FD8D3C", "#FC4E2A", "#E31A1C", "#BD0026", "#800026"]
 style = dict(weight=2, opacity=1, color="white", dashArray="3", fillOpacity=0.7)
 
 
 # Create colorbar.
+# taken and modified from https://www.dash-leaflet.com/docs/geojson_tutorial
 ctg = [
     "{}+".format(
         cls,
@@ -115,12 +117,13 @@ ctg = [
 colorbar = dlx.categorical_colorbar(categories=ctg, colorscale=colorscale, width=300, height=30, position="bottomleft")
 
 
-# Geojson rendering logic, must be JavaScript as it is executed in clientside.
+# Geojson rendering logic, must be JavaScript as it is executed on the client-side.
+# taken and modified from https://www.dash-leaflet.com/docs/geojson_tutorial
 style_handle = assign("""function(feature, context){
     const {classes, colorscale, style, colorProp} = context.hideout;  // get props from hideout
     const value = feature.properties[colorProp];  // get value the determines the color
     for (let i = 0; i < classes.length; ++i) {
-        // if less then 100 pick the color below
+        // if less than 100 pick the color below
         if (value < 100) {
             style.fillColor = "#faf9f7";
         }
@@ -132,17 +135,19 @@ style_handle = assign("""function(feature, context){
 }""")
 
 # Create geojson.
+# taken and modified from https://www.dash-leaflet.com/docs/geojson_tutorial
 geojson = dl.GeoJSON(
-    data=states_data,    # setting our data from imported json earlier
+    data=states_data,    # setting our data from imported JSON earlier
     style=style_handle,  # how to style each polygon
-    zoomToBounds=False,  # when true, zooms to bounds when data changes (e.g. on load)
-    zoomToBoundsOnClick=False,  # when true, zooms to bounds of feature (e.g. polygon) on click
+    zoomToBounds=False,  # when true, zooms to bounds when data changes (e.g., on load)
+    zoomToBoundsOnClick=False,  # when true, zooms to bounds of feature (e.g., polygon) on click
     hoverStyle=arrow_function(dict(weight=5, color="#666", dashArray="")),  # style applied on hover
     hideout=dict(colorscale=colorscale, classes=classes, style=style, colorProp="count"),
     id="geojson",
 )
 
 # Create info control.
+# taken and modified from https://www.dash-leaflet.com/docs/geojson_tutorial
 info = html.Div(
     children=get_info(),
     id="info",
@@ -156,7 +161,7 @@ info = html.Div(
 # Create app.
 app = DashProxy(prevent_initial_callbacks=True)
 
-#Add in QuantigrationRMA's logo
+# Add in QuantigrationRMA's logo
 image_filename = 'QuantigrationRMA.png' 
 encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
@@ -197,13 +202,13 @@ app.layout = html.Div([
     ),
     html.Hr(),
     html.Div(className='row',
-             style={'display' : 'flex'},
+             style={'display': 'flex'},
              children=[
                         html.Div(
                         id='button-id',
                         className='col s12 m6',
                         style={
-                              'display' : 'inline', 'width': '300px',
+                              'display': 'inline', 'width': '300px',
                               'margin-left': '5px', 'margin-right': 'auto'
                               },
                         children=[
@@ -218,7 +223,7 @@ app.layout = html.Div([
                         html.Div(
                         id='identifier-id',
                         className='col s12 m6',
-                        style={'textAlign':"right"},
+                        style={'textAlign': "right"},
                         children =[
                                     html.Div('Konstantin Dobikov', style={'color': 'black', 'fontSize': 14})
                                   ]
@@ -277,13 +282,13 @@ app.layout = html.Div([
     html.Hr(),
 # pie chart and geolocation chart are side-by-side
     html.Div(className='row',
-         style={'display' : 'flex'}, 
+         style={'display': 'flex'}, 
              children=[
         html.Div(
             id='graph-id',
             className='col s12 m6',
             style={
-                  'display' : 'inline', 'width': '1000px',
+                  'display': 'inline', 'width': '1000px',
                   'margin-left': 'auto', 'margin-right': 'auto', 'align': "center"
                   },
             ),
@@ -291,7 +296,7 @@ app.layout = html.Div([
             id='map-id',
             className='col s12 m6',
             style={
-                  'display' : 'inline', 'width': '1000px',
+                  'display': 'inline', 'width': '1000px',
                   'margin-left': 'auto', 'margin-right': 'auto', 'align': "center"
                   },
             )
@@ -304,11 +309,11 @@ app.layout = html.Div([
 #############################################
 
     
-@app.callback(Output('datatable-id','data'),
+@app.callback(Output('datatable-id', 'data'),
               [Input('filter-type', 'value'),
      Input('datatable-id', "derived_virtual_selected_rows")])
 def update_dashboard(filter_type, index):
-# custom filters to get reqested data
+# custom filters to get requested data
         # Initiated RMAs
         if filter_type == "Initiated":
             df = pd.DataFrame.from_records(db.read(
@@ -374,7 +379,7 @@ def update_styles(selected_columns):
 # derived_virtual_data will be the set of data available from the datatable in the form of 
 # a dictionary.
 # derived_virtual_selected_rows will be the selected row(s) in the table in the form of
-# a list. For this application, we are only permitting single row selection so there is only
+# a list. For this application, we are only permitting single row selection, so there is only
 # one value in the list.
 # The iloc method allows for a row, column notation to pull data from the datatable
 
@@ -400,7 +405,7 @@ def update_map(viewData, index):
     dff = pd.DataFrame.from_dict(viewData)
     
     # Because we only allow single row selection, the list can be converted to a row index here
-    # plus fixing the errors when index for selected items are higher then current results
+    # plus fixing the errors when the index for selected items is higher than he current results
     if index is None or len(index) == 0:
         row = 0
     else:
@@ -416,10 +421,10 @@ def update_map(viewData, index):
                children=[
                     dl.TileLayer(id="base-layer-id"),
                     # Marker with tool tip and popup
-                    # Column 9 and 10 define name of the customer
-                    # Column 12 defines street of the customer
-                    # Column 13 defines telephone number of the customer
-                    # Column 14 defines ZipCode of the customer
+                    # Column 9 and 10 define the name of the customer
+                    # Column 12 defines the street of the customer
+                    # Column 13 defines the telephone number of the customer
+                    # Column 14 defines the ZipCode of the customer
                     dl.LayerGroup(    
                         id="marker-layer",
                         children=[
@@ -430,7 +435,7 @@ def update_map(viewData, index):
                                     dl.Tooltip(dff.iloc[row,4]),
                                     dl.Popup(
                                         [
-                                        html.H4("Cutomer info"), 
+                                        html.H4("Customer info"), 
                                         html.P("Name: {} {}".format(dff.iloc[row,9], dff.iloc[row, 10])),
                                         html.P("Street: {}".format(dff.iloc[row, 12])),
                                         html.P("Tel: {}".format(dff.iloc[row,13])),
@@ -442,4 +447,5 @@ def update_map(viewData, index):
                 ]),
     ]
 if __name__ == "__main__":
+
     app.run(port=8087, debug=False)
