@@ -94,4 +94,4 @@ All database methods were decoupled and implemented in the DataBaseServices clas
 ...
 ```
 
-By implementing my enhancements, I achieved both of my planned course outcomes, demonstrating my programming skills and ability to use the latest tools in computer science, as well as my security mindset in developing applications that ensure the privacy and enhanced security of data.
+By implementing my enhancements, I achieved both of my planned outcomes, demonstrating my programming skills and ability to use the latest tools in computer science, as well as my security mindset in developing applications that ensure the privacy and enhanced security of data.
