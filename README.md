@@ -1,6 +1,6 @@
 # Self-Introduction
 
-I have been in the Computer Science program for three years, starting in 2022 at SNHU. I chose CS because I was amazed by the rapid development of machine learning and AI, and I wanted to understand how it works while learning various programming languages.
+I have been in the Computer Science program for three years, starting in 2022 at SNHU. I chose CS because I was amazed by the rapid development of machine learning and AI, and I wanted to understand how it works while learning various programming languages. This fascination with AI and machine learning has not only driven my interest in CS but has also influenced my approach to software engineering, particularly in understanding complex algorithms and data structures.
 
 While in the program, I have learned how to write software from zero to production. By understanding the problem to be solved and the various use cases, determining the appropriate technology, tools, and programming languages for each case, and using pseudocode and a flowchart to visualize the process more clearly.  I learned about different design patterns and which to use in various scenarios.  Another important skill I gained is how to use MEAN to build a full-stack application and migrate it to the Cloud by re-engineering it for a serverless architecture. 
 
@@ -36,7 +36,7 @@ For my Artifact in the Algorithms and data structure category, I chose to visual
 
 [Artifact Three Page](https://scenitnatsnoc.github.io/artifact_three/)
 
-## Course Outcomes: 
+## Course Outcomes 
 
 +	Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science.
 + Design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.  
