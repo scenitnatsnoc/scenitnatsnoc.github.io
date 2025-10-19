@@ -1,0 +1,37 @@
+Pseudocode Snippets of enhancements:
+…
+		OpimizedbubbleSortStatesFunc()
+		OpimizedbubbleSortCapsFunc()
+		getAverageOptimization(myIterations);
+		
+		FUNCTION PlayTrivia():
+SET COUNT = 0
+			SET INPUT to USERNAME
+			KEEP ASKING all the capitals of the States from the Array
+				IF CORRECT SET COUNT to COUNT + 1
+			SAVE the RESULTS with the Username and Count to the FILE
+		END FUNCTION
+		
+		FUNCTION ShowScoreBoard():
+			OUTPUT FILE as a TABLE, line by line, sorted by Scores with Usernames
+		NED FUNCTION
+
+		FUNCTION MainMenuDriver()
+			WHILE CHOICE is not q:
+				IF CHOICE is 1:
+					PlayUnsortedArray()
+				IF CHOICE is 2:
+					PrintSortedByCaps()
+				IF CHOICE is 3:
+					PrintSortedByStates()					
+				IF CHOICE is 4:
+					PlayTrivia()					
+				IF CHOICE is 5:
+					PlayQA()
+				IF CHOICE is 6:
+					getAverageOptimization(myIterations);
+				IF CHOICE is 7:
+					ShowScoreBoard()
+			END WHILE
+		END FUNCTION
+…
