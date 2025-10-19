@@ -97,6 +97,6 @@ All database methods were decoupled and implemented in the DataBaseServices clas
 By implementing my enhancements, I achieved both of my planned outcomes, demonstrating my programming skills and ability to use the latest tools in computer science, as well as my security mindset in developing applications that ensure the privacy and enhanced security of data.
 
 
-[Original Code on GitHub](https://scenitnatsnoc.github.io/artifact_one/original_code)
+[Original Code on GitHub](https://github.com/scenitnatsnoc/scenitnatsnoc.github.io/tree/main/artifact_one/original_code)
 
-[Enhanced Code on GitHub](https://scenitnatsnoc.github.io/artifact_one/enhanced_code)
+[Enhanced Code on GitHub](https://github.com/scenitnatsnoc/scenitnatsnoc.github.io/tree/main/artifact_one/enhanced_code)
