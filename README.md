@@ -14,7 +14,7 @@ By improving upon my projects from prior courses, I will demonstrate my mastery 
 + Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.
 + Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.
 
-Possessing the demonstrated skills mentioned above, along with being proficient in multiple programming languages and design patterns, and knowing when to use them for different use cases, makes me a stronger candidate for software engineering positions, which is a specialization I am targeting. 
+Demonstrated skills in the areas mentioned above, along with proficiency in multiple programming languages and design patterns, and an understanding of when to use them for different use cases, make me a stronger candidate for software engineering position. With a decade of experience as a System/Network Administrator and OSCP and OSCE certifications from OffSec, I am a strong fit for a cloud-based software engineering role with a security focus. Potential career options for me include positions as an Infrastructure Engineer, DevOps Engineer, or DevSecOps Engineer.
 
 # Code Review
 
