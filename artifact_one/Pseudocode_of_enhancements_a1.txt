@@ -1,0 +1,45 @@
+Pseudocode Snippets of enhancements:
+…
+Database.py
+	CLASS Connector
+		ATTRIBUTES:
+			DbFile: String
+		CONSTRUCTOR (NewDbFile)
+			SET DbFile as NewDbFile
+	END CLASS
+Users.py
+	CLASS Users
+		ATTRIBUTES:
+			Username: String
+			Password: String
+		METHODS:
+			SetUsername(NewUsername)
+			SetPassword(NewPassword)
+			GetUsername()
+			GetPassword()
+	END CLASS
+RescueAnimalDatabaseServices.py
+	CLASS DataBaseServices
+		ATTRIBUTES:
+			MyRescueAnimal: RescueAnimal
+			MyConnector: Connector
+		CONSTRUCTOR (NewConnector, NewRescueAnimal)
+			SET Connector as NewConnector
+			SET RecueAnimal as NewRescueAnimal
+		METHODS:
+			ReserveAnimal() 
+	END CLASS
+UsersDatabaseServices.py
+	CLASS DataBaseServices
+		ATTRIBUTES:
+			MyUser: Users
+			MyConnector: Connector
+		CONSTRUCTOR (NewConnector, NewUser)
+			SET Connector as NewConnector
+			SET RecueAnimal as NewUser
+		METHODS:
+			AddUser()
+			CheckUserExist()
+			CheckUserPassword() 
+	END CLASS
+…
