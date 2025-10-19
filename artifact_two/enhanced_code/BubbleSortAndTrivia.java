@@ -17,7 +17,7 @@ Enhancement Plan:
      2. Print a sorted list of States and their Capitals, either by State or by Capitals.
      3. Play Q/A game to practice the knowledge of the States and their Capitals
 	 4. Show optimization in percentage with a given number of iterations
-     4. Ability to exit 
+     5. Ability to exit 
 
 */
 
@@ -824,5 +824,6 @@ public class BubbleSortAndTrivia {
 	}
 	
 }
+
 
 
