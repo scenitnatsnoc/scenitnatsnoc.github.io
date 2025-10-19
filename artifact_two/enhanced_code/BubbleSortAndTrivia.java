@@ -16,6 +16,7 @@ Enhancement Plan:
      1. Play a trivia game with the ability to keep the highest score and the player's name in a separate file.
      2. Print a sorted list of States and their Capitals, either by State or by Capitals.
      3. Play Q/A game to practice the knowledge of the States and their Capitals
+	 4. Show optimization in percentage with a given number of iterations
      4. Ability to exit 
 
 */
@@ -34,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.List;
 
 //Write into a File
@@ -47,10 +49,7 @@ import java.io.File;
 // to read
 import java.io.FileReader;
 
-public class BubbleSortAndTrivia {
-    //pattern for digits only
-    private static final String DIGIT_PATTERN = "-?\\d+?";
-    
+public class BubbleSortAndTrivia {    
     // scoreboard file
     private static final String scoreBoardFile = ".\\ScoreBoard.txt";
     
@@ -161,18 +160,26 @@ public class BubbleSortAndTrivia {
         	{"Wisconsin","Madison"},
         	{"Wyoming","Cheyenne"}
         };
-    // method to check to get the right answer
-    public static String checkAnswer(Scanner scanner) {
-    	String answer;
-    	boolean rightAnswer = true;
-    	answer = scanner.nextLine();
+    // method to check to get only integer
+    // from 1 to 100
+    public static int checkAnswer(Scanner scanner) {
+    	int answer = 0;
+    	boolean rightAnswer = false;  	
     	do {
-    		if(answer.matches(DIGIT_PATTERN)){
-    			rightAnswer = false;
-    		} else {
-    			System.out.print("Not allowed, please use numbers only: \n");
-    			answer = scanner.nextLine();
-         }
+    		try {
+    			System.out.println("Please enter integer from 1 to 100: ");
+    			answer = scanner.nextInt();
+    			if ((answer <= 100) && (answer >= 1)) {
+    				break;
+    			} else {
+    				System.out.print("Numbers from 1 to 100 only! \n");
+    				break;
+    			}
+    		} catch(InputMismatchException e) {
+    			System.out.print("Not allowed, please use numbers only! \n");
+    			rightAnswer = true;
+    			scanner.next(); // get invalid input and continue
+    		}
     	} while(rightAnswer);
     	return answer;
     }
@@ -796,10 +803,8 @@ public class BubbleSortAndTrivia {
 	        	playQA(scnr);
 	            break;
 	        case "6":
-	        	System.out.println("Please enter an integer: ");
-	        	// casting string to integer, as we already know we are getting an integer
-	        	// that follows our pattern
-	        	myIterations = Integer.parseInt(checkAnswer(scnr));
+	        	// getting the correct integer from user input here
+	        	myIterations = checkAnswer(scnr);
 	        	getAverageOptimization(myIterations);
 	            break;
 	        case "7":
@@ -807,6 +812,8 @@ public class BubbleSortAndTrivia {
 	        	break;
 	        case "q":
 	        	System.out.println("\nThank you! I hope to see you soon!");
+	        	// closing our scanner
+	        	scnr.close();
 	        	return;
 	        default:
 	        	System.out.println("Please use numbers from 1 to 7, or q to exit");
@@ -817,3 +824,5 @@ public class BubbleSortAndTrivia {
 	}
 	
 }
+
+
